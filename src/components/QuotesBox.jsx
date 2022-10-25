@@ -16,6 +16,9 @@ const QuotesBox = () => {
     );
     return setColors;
   }
+  document.body.onload = function() {
+    changeColors();
+  }
   //   console.log(colors);
   const radomQuotes = Math.floor(Math.random() * quotes.length);
   const [quoteIndex, setQuoteIndex] = useState(radomQuotes);
@@ -23,7 +26,6 @@ const QuotesBox = () => {
     setQuoteIndex(radomQuotes);
     changeColors();
   };
-
   return (
     <div className="container__box" style={{ background: [colors] }}>
       <div className="quotesbox">
